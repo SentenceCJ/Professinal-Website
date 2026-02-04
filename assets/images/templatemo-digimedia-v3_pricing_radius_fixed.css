@@ -2318,15 +2318,4 @@ Ajout Diverse
 }
 .pricing .blog-post .down-content {
   border-radius: 25px;     /* garde les coins arrondis même sans .thumb */
-
-  
 }
-/* ============================= */
-/* PRICING – ESPACEMENT MOBILE */
-/* ============================= */
-@media (max-width: 991px) {
-  #pricing .blog-post {
-    margin-bottom: 32px;
-  }
-}
-

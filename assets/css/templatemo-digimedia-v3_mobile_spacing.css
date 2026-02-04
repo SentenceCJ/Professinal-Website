@@ -2110,6 +2110,23 @@ Ajout Diverse
 */
 
 /* ============================= */
+/* TARIFS (section #blog) – ESPACEMENT MOBILE */
+/* ============================= */
+/* La section "Tarifs" réutilise les blocs .blog-post.
+   Sur mobile, on ajoute de l'espace entre les cartes. */
+
+@media (max-width: 767px) {
+  #blog .blog-post {
+    margin-bottom: 22px;
+  }
+
+  /* Sécurité: si une règle existante annule le margin, on force sur le conteneur */
+  #blog .pricing-card {
+    margin-bottom: 22px;
+  }
+}
+
+/* ============================= */
 /* LOGO – FIX MOBILE */
 /* ============================= */
 
@@ -2220,113 +2237,35 @@ Ajout Diverse
   z-index: 2;
 }
 
-/* FIX border-radius cartes pricing */
-.pricing-item,
-.pricing-item.active,
-.pricing-item:hover {
-  border-radius: 20px !important;
-  overflow: hidden;
-}
-.pricing-item.active::before,
-.pricing-item.active::after {
-  border-radius: 20px !important;
-}
-.pricing-item * {
-  border-radius: inherit;
-}
-.pricing-item {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+/* SERVICES ICONES – FIX TAILLE */
+.services .icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.services .icon svg {
+  width: 60px;
+  height: 60px;
+}
 
 /* ============================= */
-/* SERVICES – MOBILE UX FIX */
+/* TARIFS (id="#blog") – ESPACEMENT ENTRE PACKS (MOBILE) */
 /* ============================= */
+/* La section "Tarifs" réutilise les blocs .blog-post. Sur mobile, on ajoute
+   de l'air entre les 3 cartes empilées. */
 @media (max-width: 767px) {
-
-  /* Grille des services */
-  .services .naccs .menu {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    justify-items: center;
-    align-items: start;
-    margin-bottom: 24px;
+  #blog.blog .blog-post {
+    margin-bottom: 22px;
   }
 
-  /* Carte service cliquable */
-  .services .naccs .menu > div {
-    width: 100%;
-    padding: 14px 10px;
-    border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    text-align: center;
-    cursor: pointer;
-  }
-
-  /* Icône */
-  .services .naccs .menu .icon {
-    margin: 0 auto 8px auto;
-    width: 60px;
-    height: 60px;
-  }
-
-  .services .naccs .menu .icon img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* 🔥 TITRE SOUS L’ICÔNE (IMPORTANT) */
-  .services .naccs .menu h4,
-  .services .naccs .menu span,
-  .services .naccs .menu .title {
-    display: block !important;
-    font-size: 13px !important;
-    font-weight: 600;
-    line-height: 1.25;
-    margin-top: 6px;
-    color: #2a2a2a;
-    text-align: center;
-    white-space: normal;
-  }
-
-  /* Empêche la template de cacher le texte */
-  .services .naccs .menu * {
-    font-size: inherit !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  /* Carte active (feedback UX) */
-  .services .naccs .menu > div.active {
-    outline: 2px solid rgba(59, 130, 246, 0.4);
-    background: rgba(59, 130, 246, 0.06);
+  /* évite une marge trop grande après la dernière carte */
+  #blog.blog .col-lg-4:last-child .blog-post {
+    margin-bottom: 0;
   }
 }
-
-/* ============================= */
-/* PRICING – FIX BORDER RADIUS   */
-/* (évite les coins "pointus"    */
-/* quand .down-content a un fond)*/
-/* ============================= */
-.pricing .blog-post {
-  overflow: hidden;        /* force le contenu interne à respecter le radius */
-  border-radius: 25px;
-  background: #fff;        /* utile si la carte n'a plus d'image (thumb) */
-}
-.pricing .blog-post .down-content {
-  border-radius: 25px;     /* garde les coins arrondis même sans .thumb */
-
-  
-}
-/* ============================= */
-/* PRICING – ESPACEMENT MOBILE */
-/* ============================= */
-@media (max-width: 991px) {
-  #pricing .blog-post {
-    margin-bottom: 32px;
-  }
-}
-

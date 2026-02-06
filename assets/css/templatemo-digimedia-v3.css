@@ -2330,3 +2330,77 @@ Ajout Diverse
   }
 }
 
+/* ============================= */
+/* HERO – FIX ALIGNEMENT MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* Conteneur texte du hero */
+  .main-banner .left-content,
+  .main-banner .left-content p,
+  .main-banner .left-content h1,
+  .main-banner .left-content h2,
+  .main-banner .left-content h3 {
+    text-align: center !important;
+  }
+
+  /* Texte descriptif */
+  .main-banner .left-content p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 90%;
+  }
+
+  /* Bouton */
+  .main-banner .border-first-button,
+  .main-banner .border-first-button a {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* ============================= */
+/* SERVICES (TABS) – FIX TAILLES MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* le conteneur des "cards" (menu des services) */
+  .services .naccs .menu {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100%;
+  }
+
+  /* chaque "card" */
+  .services .naccs .menu > div {
+    width: 100% !important;
+    min-height: 120px !important;       /* 👈 rend tout identique */
+    padding: 14px 12px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    border-radius: 16px;                /* conserve le style */
+  }
+
+  /* icônes : taille uniforme */
+  .services .naccs .menu > div img {
+    width: 56px !important;
+    height: 56px !important;
+    object-fit: contain !important;
+    margin: 0 0 8px 0 !important;
+  }
+
+  /* titres : même rendu + évite que ça "pousse" la card */
+  .services .naccs .menu > div h4 {
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    max-width: 100%;
+    word-break: break-word;
+  }
+}

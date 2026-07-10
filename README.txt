@@ -1,18 +1,16 @@
-SITE ANTOINE MACHEDA – REFONTE COMPLÈTE
+SITE ANTOINE MACHEDA – VERSION MULTIPAGE
 
-Structure :
-- index.html
-- mentions_legales.html
-- cgu.html
-- assets/css/styles.css (seule feuille CSS)
-- assets/js/script.js (seul fichier JavaScript)
-- robots.txt
-- sitemap.xml
+Cette version contient :
+- page d’accueil
+- 6 pages de services dédiées
+- page Pourquoi me choisir
+- page Déroulement du projet
+- FAQ de 18 questions avec données structurées
+- pages légales
+- sitemap et robots.txt
+- une seule feuille CSS et un seul fichier JavaScript
 
-Aucune dépendance Bootstrap ou jQuery.
+IMPORTANT :
+Le dossier assets/images n’est pas inclus. Copiez votre dossier images actuel dans assets/images/ en conservant exactement les noms des fichiers.
 
-IMPORTANT : copiez votre dossier assets/images existant dans le dossier assets/ de cette nouvelle version. Tous les noms d’images utilisés ont été conservés.
-
-Le formulaire Formspree utilise toujours : https://formspree.io/f/xpqlvryw
-
-Vérifiez si votre domaine canonique officiel utilise www. Si ce n’est pas le cas, remplacez les URL https://www.antoine-macheda.fr dans les fichiers HTML, robots.txt et sitemap.xml.
+Avant mise en ligne, vérifiez que votre domaine canonique est bien https://www.antoine-macheda.fr/.
